@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
+
+    implementation project(path: ':domain')
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        android:padding="@dimen/default_padding">
+
+        <TextView
+            android:id="@+id/makeModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:text="Honda Civic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="@string/or_similar"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding"
+            tools:context=".ui.DetailsFragment">
+
+            <ImageView
+                android:id="@+id/rentalImage"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="16dp" />
+
+
+            <LinearLayout
+                android:id="@+id/iconsHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/doorQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_car_door"
+                    android:gravity="start"
+                    android:textSize="@dimen/spec_text_size"
+                    tools:text="4" />
+
+                <TextView
+                    android:id="@+id/baggageQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_baggage"
+                    android:gravity="start"
+                    android:textSize="@dimen/spec_text_size"
+                    tools:text="4" />
+
+                <TextView
+                    android:id="@+id/passengerQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_padding"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:drawablePadding="8dp"
+                    android:drawableStart="@drawable/ic_passenger"
+                    android:gravity="start"
+                    android:textSize="@dimen/spec_text_size"
+                    tools:text="4" />
+            </LinearLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/airConditionerLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/air_conditioner_label" />
+
+                <TextView
+                    android:id="@+id/airConditioner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/airConditionerLabel"
+                    app:layout_constraintStart_toEndOf="@+id/airConditionerLabel"
+                    app:layout_constraintTop_toTopOf="@+id/airConditionerLabel"
+                    tools:text="Yes" />
+
+                <TextView
+                    android:id="@+id/fuelTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/fuel_type_label"
+                    app:layout_constraintTop_toBottomOf="@+id/airConditionerLabel" />
+
+                <TextView
+                    android:id="@+id/fuelType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/fuelTypeLabel"
+                    app:layout_constraintStart_toStartOf="@+id/airConditioner"
+                    app:layout_constraintTop_toTopOf="@+id/fuelTypeLabel"
+                    tools:text="Petrol" />
+
+                <TextView
+                    android:id="@+id/transmission_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/transmission_label"
+                    app:layout_constraintTop_toBottomOf="@+id/fuelTypeLabel" />
+
+                <TextView
+                    android:id="@+id/transmissionType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/transmission_label"
+                    app:layout_constraintStart_toStartOf="@+id/airConditioner"
+                    app:layout_constraintTop_toTopOf="@+id/transmission_label"
+                    tools:text="Automatic" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:gravity="end|bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingRight="@dimen/default_padding"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/priceCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size"
+            tools:text="CAD" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorAccent"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="50.00" />
+
+    </LinearLayout>
+
+</LinearLayout>

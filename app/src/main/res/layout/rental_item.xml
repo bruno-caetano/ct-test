@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding"
+    card_view:cardCornerRadius="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <ImageView
+            android:id="@+id/rentalImage"
+            android:layout_width="@dimen/small_image_size"
+            android:layout_height="@dimen/small_image_size"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/makeModel" />
+
+        <TextView
+            android:id="@+id/makeModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryText"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Honda Civic" />
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/rentalImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="50.00" />
+
+        <TextView
+            android:id="@+id/priceCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/totalPrice"
+            app:layout_constraintBottom_toBottomOf="@+id/totalPrice"
+            app:layout_constraintEnd_toStartOf="@+id/totalPrice"
+            tools:text="CAD" />
+
+        <LinearLayout
+            android:id="@+id/iconsHolder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rentalImage">
+
+            <TextView
+                android:id="@+id/doorQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_car_door"
+                android:gravity="start"
+                android:textSize="@dimen/spec_text_size"
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/baggageQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_baggage"
+                android:gravity="start"
+                android:textSize="@dimen/spec_text_size"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="4" />
+
+            <TextView
+                android:id="@+id/passengerQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="8dp"
+                android:drawableStart="@drawable/ic_passenger"
+                android:gravity="start"
+                android:textSize="@dimen/spec_text_size"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="4" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/orSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/or_similar"
+            android:textColor="@color/secondaryText"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/makeModel"
+            app:layout_constraintStart_toEndOf="@+id/makeModel"
+            app:layout_constraintTop_toTopOf="@+id/makeModel"
+            app:layout_constraintVertical_bias="0.8" />
+
+        <TextView
+            android:id="@+id/vendorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/makeModel"
+            app:layout_constraintTop_toBottomOf="@+id/makeModel"
+            tools:text="by Alamo" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

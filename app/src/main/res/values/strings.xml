@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Cartrawler</string>
+
+    <!-- General strings -->
+    <string name="or_similar">or similar</string>
+    <string name="by_vendor">by %s</string>
+
+    <!-- Rental info -->
+    <string name="pick_up_label">Pick-up</string>
+    <string name="return_label">Return</string>
+
+    <!-- Details -->
+    <string name="air_conditioner_label">Air conditioner</string>
+    <string name="fuel_type_label">Fuel type</string>
+    <string name="transmission_label">Transmission</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Menu -->
+    <string name="price_low_to_high">Price (Low to High)</string>
+    <string name="price_high_to_low">Price (High to Low)</string>
+    <string name="vendor_a_z">Vendor A-Z</string>
+    <string name="vendor_z_a">Vendor Z-A</string>
+
+    <!-- Error -->
+    <string name="retry">retry</string>
+    <string name="network_error_message">Looks like we had a network problem</string>
+    <string name="network_error_title">Oops…</string>
+    <string name="network_error_back">Go back</string>
+
+</resources>

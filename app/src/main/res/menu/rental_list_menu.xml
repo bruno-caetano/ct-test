@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/priceGroup">
+        <item
+            android:id="@+id/sort_by_price_asc"
+            android:title="@string/price_low_to_high" />
+        <item
+            android:id="@+id/sort_by_price_desc"
+            android:title="@string/price_high_to_low" />
+    </group>
+    <group android:id="@+id/vendorGroup">
+        <item
+            android:id="@+id/sort_by_vendor_asc"
+            android:title="@string/vendor_a_z" />
+        <item
+            android:id="@+id/sort_by_vendor_desc"
+            android:title="@string/vendor_z_a" />
+    </group>
+</menu>
