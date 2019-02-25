@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity(), RentalListFragment.OnRentalListListene
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
-        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         return true
     }
 }
