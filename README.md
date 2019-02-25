@@ -1,6 +1,6 @@
 # ct-test
 ## Architecture decisions
-In this project, I took 2 major architecture decisions: 1. Use the [Clean architecture](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) principles (by Uncle Bob) and [MVP](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
+In this project, I took 2 major architecture decisions: The use [Clean architecture](http://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) principles (by Uncle Bob) and [MVP](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 
 The app was split into 3 modules: Domain, Data and App. To achieve independence between them each layer has its own models and converters.
 
